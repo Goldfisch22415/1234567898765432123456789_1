@@ -2,7 +2,9 @@ import os
 import discord
 from discord.ext import commands
 import asyncio
-import flask
+from flask import flask
+import threading
+
 
 intents = discord.Intents.default()
 intents.members = True
@@ -66,9 +68,6 @@ async def accept(interaction: discord.Interaction):
 bot.run(os.getenv("DISCORD_TOKEN"))
     
 #test
-
-from flask import Flask
-import threading
 
 app = Flask(__name__)
 
