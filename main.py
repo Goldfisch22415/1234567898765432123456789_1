@@ -3,8 +3,7 @@ import discord
 from discord.ext import commands
 import asyncio
 
-DISCORD_TOKEN={{ secret.DISCORD_TOKEN }}
-
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 
 # Erforderliche Intents aktivieren (wichtig für Nachrichten-Events)
 intents = discord.Intents.default()
