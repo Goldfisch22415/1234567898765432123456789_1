@@ -30,7 +30,7 @@ async def on_member_join(member: discord.Member):
     channel = await guild.create_text_channel(name=f"welcome-{member.name}", overwrites=overwrites)
 
     await channel.send(
-        f"**Herzlich willkommen** auf **{server_name}**, {member.mention}.\n\n"
+        f"**Herzlich willkommen** auf **GameHUB**, {member.mention}.\n\n"
         "Wir freuen uns, dich hier begrüßen zu dürfen! Bitte nimm dir einen Moment Zeit, die Regeln durchzulesen, "
         "damit wir gemeinsam eine freundliche und respektvolle Community aufbauen können.\n\n"
         "**Schreibe `/accept`, um die Regeln zu akzeptieren und dem Server beizutreten.**"
