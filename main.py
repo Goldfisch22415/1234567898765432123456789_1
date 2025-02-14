@@ -2,8 +2,6 @@ import os
 import discord
 from discord.ext import commands
 import asyncio
-from flask import Flask
-import threading
 
 intents = discord.Intents.default()
 intents.members = True
@@ -63,10 +61,10 @@ async def accept(interaction: discord.Interaction):
         print("Fehler: Keine Berechtigung, um den Kanal zu löschen.")
     except discord.HTTPException as e:
         print(f"Ein Fehler ist aufgetreten: {e}")
-
-bot.run(os.getenv("DISCORD_TOKEN"))
     
 #test
+from flask import Flask
+import threading
 
 app = Flask(__name__)
 
@@ -80,4 +78,4 @@ def run_webserver():
 # Starte den Webserver in einem eigenen Thread
 threading.Thread(target=run_webserver, daemon=True).start()
 
-    
+bot.run(os.getenv("DISCORD_TOKEN"))
