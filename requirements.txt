@@ -1,4 +1,2 @@
-import os
-import discord
-from discord.ext import commands
-import asyncio
+discord.py==2.3.0
+python-dotenv==0.19.2
