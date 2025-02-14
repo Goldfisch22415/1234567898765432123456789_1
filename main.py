@@ -5,7 +5,6 @@ import asyncio
 from flask import Flask
 import threading
 
-
 intents = discord.Intents.default()
 intents.members = True
 intents.message_content = True
