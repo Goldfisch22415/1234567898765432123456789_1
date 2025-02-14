@@ -73,4 +73,5 @@ async def accept(interaction: discord.Interaction):
         print(f"Ein Fehler ist aufgetreten: {e}")
 
 # Starte den Bot, indem das Token aus der Umgebungsvariable 'DISCORDTOKEN' geladen wird.
+
 bot.run(os.getenv("DISCORD_TOKEN"))
