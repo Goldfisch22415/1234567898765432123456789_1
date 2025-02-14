@@ -2,6 +2,7 @@ import os
 import discord
 from discord.ext import commands
 import asyncio
+import flask
 
 intents = discord.Intents.default()
 intents.members = True
@@ -51,7 +52,7 @@ async def accept(interaction: discord.Interaction):
         await interaction.response.send_message("Keine Berechtigung, um die Rolle zu vergeben!", ephemeral=True)
         return
 
-    await interaction.response.send_message(f"{member.mention}, du bist jetzt Mitglied! Warte 5sek um 🎉")
+    await interaction.response.send_message(f"{member.mention}, du bist jetzt Mitglied!🎉")
 
     await asyncio.sleep(2)
 
@@ -63,3 +64,22 @@ async def accept(interaction: discord.Interaction):
         print(f"Ein Fehler ist aufgetreten: {e}")
 
 bot.run(os.getenv("DISCORD_TOKEN"))
+    
+#test
+
+from flask import Flask
+import threading
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "OK", 200  # Antwort für den Health-Check
+
+def run_webserver():
+    app.run(host="0.0.0.0", port=8000)
+
+# Starte den Webserver in einem eigenen Thread
+threading.Thread(target=run_webserver, daemon=True).start()
+
+    
