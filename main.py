@@ -29,7 +29,7 @@ async def on_member_join(member: discord.Member):
 
     await channel.send(
         f"**Herzlich willkommen** auf **GameHUB**, {member.mention}.\n\n"
-        "Wir freuen uns, dich hier begrüßen zu dürfen! Bitte nimm dir einen Moment Zeit, die Regeln durchzulesen, "
+        "Wir freuen uns, dich hier begrüßen zu dürfen! Bitte nimm dir einen Moment Zeit, die Regeln durchzulesen, \n"
         "damit wir gemeinsam eine freundliche und respektvolle Community aufbauen können.\n\n"
         "**Schreibe `/accept`, um die Regeln zu akzeptieren und dem Server beizutreten.**"
     )
