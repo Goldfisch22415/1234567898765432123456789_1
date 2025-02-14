@@ -75,3 +75,4 @@ async def accept(interaction: discord.Interaction):
 # Starte den Bot, indem das Token aus der Umgebungsvariable 'DISCORDTOKEN' geladen wird.
 
 bot.run(os.getenv("DISCORD_TOKEN"))
+
