@@ -3,8 +3,6 @@ import discord
 from discord.ext import commands
 import asyncio
 
-DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
-
 # Erforderliche Intents aktivieren (wichtig für Nachrichten-Events)
 intents = discord.Intents.default()
 intents.members = True
@@ -61,7 +59,7 @@ async def accept(interaction: discord.Interaction):
         return
 
     # Bestätigungsnachricht senden
-    await interaction.response.send_message(f"{member.mention}, du bist jetzt Mitglied! 🎉")
+    await interaction.response.send_message(f"{member.mention}, du bist jetzt Mitglied! Warte 5sek um 🎉")
 
     # Kurze Wartezeit, damit die Bestätigung gelesen werden kann
     await asyncio.sleep(2)
@@ -76,4 +74,4 @@ async def accept(interaction: discord.Interaction):
 
 # Starte den Bot, indem das Token aus der Umgebungsvariable 'DISCORDTOKEN' geladen wird.
 
-bot.run("DISCORD_TOKEN")
+bot.run(os.getenv["DISCORD_TOKEN"])
