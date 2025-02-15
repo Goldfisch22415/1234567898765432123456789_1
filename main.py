@@ -62,7 +62,7 @@ async def accept(interaction: discord.Interaction):
     except discord.HTTPException as e:
         print(f"Ein Fehler ist aufgetreten: {e}")
     
-#test
+#twichtig für alles
 from flask import Flask
 import threading
 
